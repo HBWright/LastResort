@@ -1,0 +1,11 @@
+Model Information:
+* title:	Wii U - Planes Fire & Rescue - Grand Fusel Lodge
+* source:	https://sketchfab.com/3d-models/wii-u-planes-fire-rescue-grand-fusel-lodge-3d8fe36622064936bd256db98d989367
+* author:	World game (https://sketchfab.com/bradleywat128)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Wii U - Planes Fire & Rescue - Grand Fusel Lodge" (https://sketchfab.com/3d-models/wii-u-planes-fire-rescue-grand-fusel-lodge-3d8fe36622064936bd256db98d989367) by World game (https://sketchfab.com/bradleywat128) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
