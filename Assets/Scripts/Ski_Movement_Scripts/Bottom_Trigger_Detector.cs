@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Bottom_Trigger_Detector : MonoBehaviour
 {
-    public GameObject currentBody; // Leave both these empty in inspector - H
-    public GameObject previousBody; // important for the pushing mechanic
+    public GameObject currentBody; 
+    public GameObject previousBody; 
     public GameObject pushDownL;
     public GameObject pushBackL;
     public GameObject pushDownR;
@@ -16,15 +16,21 @@ public class Bottom_Trigger_Detector : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        if (other.CompareTag("ski_ignore"))
+            return;
+
         if (other.gameObject != currentBody) // updates if it's a new body
         {
-            previousBody = currentBody; // stores the last non-null body
+            previousBody = currentBody;
             currentBody = other.gameObject;
+
+            Debug.Log("New body entered: " + currentBody.name);
         }
 
         if (previousBody == pushDownL && currentBody == pushBackL)
         {
             pushedL = true;
+            Debug.Log("Pushed Left!");
             previousBody = null;
             currentBody = null;
         }
@@ -32,6 +38,7 @@ public class Bottom_Trigger_Detector : MonoBehaviour
         else if (previousBody == pushDownR && currentBody == pushBackR)
         {
             pushedR = true;
+            Debug.Log("Pushed Right!");
             previousBody = null;
             currentBody = null;
         }
@@ -39,8 +46,12 @@ public class Bottom_Trigger_Detector : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
+        if (other.CompareTag("ski_ignore"))
+            return;
+
         if (other.gameObject == currentBody)
         {
+            Debug.Log("Body exited: " + currentBody.name);
             currentBody = null;
         }
     }

@@ -1373,7 +1373,7 @@ GameObject:
   - component: {fileID: 849671757}
   m_Layer: 0
   m_Name: Ski
-  m_TagString: Untagged
+  m_TagString: ski_ignore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1390,8 +1390,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.5, z: -107.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1602663972}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &849671754
@@ -3000,7 +2999,7 @@ Transform:
   m_GameObject: {fileID: 1602663971}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.5, z: 0.5110016}
+  m_LocalPosition: {x: 0, y: 0, z: -106.589}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3010,7 +3009,7 @@ Transform:
   - {fileID: 2115875203}
   - {fileID: 923443348}
   - {fileID: 1055905225}
-  m_Father: {fileID: 849671753}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1604577947
 GameObject:
@@ -3814,7 +3813,7 @@ GameObject:
   - component: {fileID: 1829531580}
   m_Layer: 0
   m_Name: Plane
-  m_TagString: Untagged
+  m_TagString: ski_ignore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4811,4 +4810,5 @@ SceneRoots:
   - {fileID: 1885740441}
   - {fileID: 161858290}
   - {fileID: 849671753}
+  - {fileID: 1602663972}
   - {fileID: 1345361026}
