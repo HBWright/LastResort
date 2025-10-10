@@ -13,8 +13,13 @@ public class SkiMovement : MonoBehaviour
     public GameObject turnLeft;
     public GameObject turnRight;
 
-    public float turnRotation = 10f;
+
+    [Header("Ski Speed Attributes")]
+    public float turnRotationSpeed = 10f;
     public float maxSpeed = 9f;
+    public float minSpeed = 4.1f;
+    public float speedDecrease = .2f;
+    public float decreaseRate = 1f;
     private float currentSpeed;         // current moving speed
 
     void Start()
@@ -30,11 +35,11 @@ public class SkiMovement : MonoBehaviour
             
             if (sharedBody == turnRight)
             {
-                skis.transform.Rotate(Vector3.up, turnRotation * Time.deltaTime);
+                skis.transform.Rotate(Vector3.up, turnRotationSpeed * Time.deltaTime);
             }
             else if (sharedBody == turnLeft)
             {
-                skis.transform.Rotate(Vector3.up, -turnRotation * Time.deltaTime);
+                skis.transform.Rotate(Vector3.up, -turnRotationSpeed * Time.deltaTime);
             }
         }
 
@@ -63,11 +68,11 @@ public class SkiMovement : MonoBehaviour
     {
         while (true)
         {
-            if (currentSpeed > 4.1)
+            if (currentSpeed > minSpeed)
             {
-                currentSpeed -= .2f;
+                currentSpeed -= speedDecrease;
             }
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(decreaseRate);
         }
     }
 }
