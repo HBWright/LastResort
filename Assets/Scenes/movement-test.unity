@@ -415,10 +415,10 @@ MonoBehaviour:
   topTriggerLeft: {fileID: 1809227983}
   bottomTriggerLeft: {fileID: 809813735}
   topTriggerRight: {fileID: 860546076}
-  bottomTriggerRight: {fileID: 623897549}
+  bottomTriggerRight: {fileID: 623897554}
   turnLeft: {fileID: 923443347}
   turnRight: {fileID: 1055905224}
-  turnRotationSpeed: 10
+  turnRotationSpeed: 15
   maxSpeed: 9
   minSpeed: 4.1
   speedDecrease: 0.2
@@ -437,7 +437,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ski: {fileID: 849671753}
   xrRig: {fileID: 161858290}
-  offsetVector: {x: 0, y: 0.8, z: 0}
+  offsetVector: {x: 0, y: 0.8, z: 0.1}
 --- !u!1 &339748812
 GameObject:
   m_ObjectHideFlags: 0
@@ -452,7 +452,7 @@ GameObject:
   - component: {fileID: 339748814}
   m_Layer: 0
   m_Name: backL
-  m_TagString: Untagged
+  m_TagString: left_ignore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -467,7 +467,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.5, y: 0, z: -1}
-  m_LocalScale: {x: 1, y: 2, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1602663972}
@@ -956,7 +956,7 @@ GameObject:
   - component: {fileID: 623897552}
   - component: {fileID: 623897551}
   - component: {fileID: 623897550}
-  - component: {fileID: 623897549}
+  - component: {fileID: 623897554}
   m_Layer: 0
   m_Name: bottomTriggerR
   m_TagString: Untagged
@@ -964,26 +964,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &623897549
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 623897548}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cbcd2389e590e5e4483fa515d5403965, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentBody: {fileID: 0}
-  previousBody: {fileID: 0}
-  pushDownL: {fileID: 908975402}
-  pushBackL: {fileID: 339748812}
-  pushDownR: {fileID: 1421996313}
-  pushBackR: {fileID: 2115875202}
-  pushedL: 0
-  pushedR: 0
 --- !u!136 &623897550
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1072,6 +1052,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1776359482}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &623897554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 623897548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cb5521c7793fde4ebae827fd958c423, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentBody: {fileID: 0}
+  previousBody: {fileID: 0}
+  pushDownR: {fileID: 1421996313}
+  pushBackR: {fileID: 2115875202}
+  pushedR: 0
 --- !u!1 &633215121
 GameObject:
   m_ObjectHideFlags: 0
@@ -1301,10 +1298,7 @@ MonoBehaviour:
   previousBody: {fileID: 0}
   pushDownL: {fileID: 908975402}
   pushBackL: {fileID: 339748812}
-  pushDownR: {fileID: 1421996313}
-  pushBackR: {fileID: 2115875202}
   pushedL: 0
-  pushedR: 0
 --- !u!1 &824331771
 GameObject:
   m_ObjectHideFlags: 0
@@ -1680,7 +1674,7 @@ GameObject:
   - component: {fileID: 908975404}
   m_Layer: 0
   m_Name: downL
-  m_TagString: Untagged
+  m_TagString: left_ignore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1695,7 +1689,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.5, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 2, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1602663972}
@@ -1804,7 +1798,7 @@ GameObject:
   - component: {fileID: 923443349}
   m_Layer: 0
   m_Name: turnL
-  m_TagString: Untagged
+  m_TagString: top_ignore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1928,7 +1922,7 @@ GameObject:
   - component: {fileID: 1055905226}
   m_Layer: 0
   m_Name: turnR
-  m_TagString: Untagged
+  m_TagString: top_ignore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2364,7 +2358,6 @@ GameObject:
   - component: {fileID: 1295816085}
   - component: {fileID: 1295816088}
   - component: {fileID: 1295816087}
-  - component: {fileID: 1295816086}
   m_Layer: 0
   m_Name: Stick
   m_TagString: Untagged
@@ -2389,27 +2382,6 @@ Transform:
   - {fileID: 809813731}
   m_Father: {fileID: 1604577948}
   m_LocalEulerAnglesHint: {x: 18.733, y: 0, z: 0}
---- !u!65 &1295816086
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1295816084}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1295816087
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2586,7 +2558,7 @@ GameObject:
   - component: {fileID: 1421996315}
   m_Layer: 0
   m_Name: downR
-  m_TagString: Untagged
+  m_TagString: right_ignore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2601,7 +2573,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.5, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 2, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1602663972}
@@ -2993,8 +2965,8 @@ Transform:
   m_GameObject: {fileID: 1602663971}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 6.65, z: 0.20000204}
-  m_LocalScale: {x: 2, y: 10, z: 0.40000004}
+  m_LocalPosition: {x: 0, y: 6.65, z: 0.306}
+  m_LocalScale: {x: 3, y: 10, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 908975403}
@@ -4477,7 +4449,7 @@ GameObject:
   - component: {fileID: 2115875204}
   m_Layer: 0
   m_Name: backR
-  m_TagString: Untagged
+  m_TagString: right_ignore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4492,7 +4464,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.5, y: 0, z: -1}
-  m_LocalScale: {x: 1, y: 2, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1602663972}

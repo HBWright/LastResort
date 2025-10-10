@@ -7,9 +7,9 @@ public class SkiMovement : MonoBehaviour
     public GameObject skis;
 
     public Top_Trigger_Detector topTriggerLeft;
-    public Bottom_Trigger_Detector bottomTriggerLeft;
+    public Bottom_Trigger_Detector_Left bottomTriggerLeft;
     public Top_Trigger_Detector topTriggerRight;
-    public Bottom_Trigger_Detector bottomTriggerRight;
+    public Bottom_Trigger_Detector_Right bottomTriggerRight;
     public GameObject turnLeft;
     public GameObject turnRight;
 

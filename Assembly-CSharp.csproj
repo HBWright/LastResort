@@ -69,14 +69,12 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
     <Compile Include="Assets\Scripts\Ski_Movement_Scripts\Top_Trigger_Detector.cs" />
-    <Compile Include="Assets\Scripts\Ski_Movement_Scripts\Bottom_Trigger_Detector.cs" />
     <Compile Include="Assets\Sketchfab For Unity\Scripts\SketchfabUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
-    <Compile Include="Assets\Lava_Flowing_Shader\Scripts\ScrollingUVs_Layers.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
     <Compile Include="Assets\Sketchfab For Unity\Scripts\SketchfabLogger.cs" />
@@ -89,6 +87,8 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
     <Compile Include="Assets\Sketchfab For Unity\Scripts\Resizer.cs" />
     <Compile Include="Assets\Sketchfab For Unity\Scripts\SketchfabApi.cs" />
+    <Compile Include="Assets\Scripts\Ski_Movement_Scripts\Bottom_Trigger_Detector_Right.cs" />
+    <Compile Include="Assets\Lava_Flowing_Shader (2)\Scripts\ScrollingUVs_Layers.cs" />
     <Compile Include="Assets\Sketchfab For Unity\Scripts\SketchfabPlugin.cs" />
     <Compile Include="Assets\Sketchfab For Unity\Scripts\SketchfabImporterWindow.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
@@ -108,6 +108,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
+    <Compile Include="Assets\Scripts\Ski_Movement_Scripts\Bottom_Trigger_Detector_Left.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
@@ -117,52 +118,162 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Standard\2Textures\Diffuse.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Unlit\2 Textures_realtime_shadow.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Specialized\Mali 400\Surface\3Textures\Bumped.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
+    <None Include="Assets\MeshTerrainEditor\EditorResources\MTE_EDITOR_RESOURCE_LOCATION.txt" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Surface\5Textures\Specular-NoFog.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\URP\2Textures.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Surface\8Textures\Specular.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Standard\2Textures\Bumped.shader" />
     <None Include="Assets\Sketchfab For Unity\Dependencies\Shaders\GLTFFlipTexture.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Standard\5Textures\Diffuse-NoFog.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Standard\8Textures\VertexColored.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Surface\Grass\UnlitAlphaCutout.shader" />
+    <None Include="Assets\MeshTerrainEditor\EditorResources\Languages\zh-Hans.xml" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\URP\5Textures_DisplayNormal.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Surface\3Textures\Specular_for_target_2.0.shader" />
+    <None Include="Assets\MeshTerrainEditor\EditorResources\Shaders\Highlight.shader" />
     <None Include="Assets\Sketchfab For Unity\Dependencies\Shaders\GLTFColorSpace.cginc" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Unlit\3 Textures_baked_lightmap.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Standard\7Textures\Diffuse.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Surface\Vertex-colored\Bumped.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Surface\5Textures\Specular_for_target_2.0.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Surface\5Textures\Diffuse-NoFog.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Standard\8Textures\Diffuse.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Surface\3Textures\VertexColored.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Surface\5Textures\VertexColored-Fog.shader" />
     <None Include="Assets\Import\Ski_gongola_and_lift_station_detailed_drafts\license.txt" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\URP\TextureArray_DisplayNormal.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Surface\4Textures\Specular.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Standard\4Textures\HeightBlendPacked.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Surface\5Textures\Bumped_for_target_2.0.shader" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald-Bold - OFL.txt" />
-    <None Include="Assets\Lava_Flowing_Shader\Shaders\Diffuse_Lava_Distort.shader" />
+    <None Include="Assets\Lava_Flowing_Shader (2)\Shaders\Diffuse_Lava_Distort.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Surface\5Textures\Specular-Fog.shader" />
     <None Include="Assets\Sketchfab For Unity\Dependencies\Shaders\GLTFPackOccMetalRough.shader" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Standard\6Textures\Diffuse.shader" />
+    <None Include="Assets\MeshTerrainEditor\EditorResources\Languages\en-US.xml" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Standard\4Textures\Bumped.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Standard\6Textures\VertexColored.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Surface\6Textures\Specular.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Surface\Grass\AlphaCutout.shader" />
     <None Include="Assets\Cabin\Terrain\Sky by Heiko Irrgang\README.txt" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Surface\5Textures\Bumped-Fog.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Surface\TextureArray\Lambert.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Surface\TextureArray\BlinnPhong.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\URP\TextureArray_Triplanar.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
-    <None Include="Assets\Lava_Flowing_Shader\ReadMe.txt" />
+    <None Include="Assets\Lava_Flowing_Shader (2)\ReadMe.txt" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Surface\Vertex-colored\Diffuse.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Standard\Packed\4Textures.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Specialized\Mali 400\Surface\2Textures\Diffuse.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Surface\7Textures\Diffuse.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Surface\4Textures\Bumped.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Standard\4Textures\VertexColored.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Standard\2Textures\VertexColored.shader" />
     <None Include="Assets\Sketchfab For Unity\Dependencies\Libraries\Newtonsoft.Json.dll" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\URP\5Textures.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Surface\7Textures\Specular.shader" />
+    <None Include="Assets\MeshTerrainEditor\EditorResources\Shaders\PaintTexturePreview_URP.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Surface\3Textures\Bumped_for_target_2.0.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Surface\Grass\UnlitBillboard.Shader" />
+    <None Include="Assets\Inferno_World_Free\Render_Pipeline_Convert\Render_Pipeline_Instructions_Unity_2021.txt" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Specialized\Mali 400\ReadMe.txt" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Standard\7Textures\Bumped.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\Cabin\Terrain\Sky by Heiko Irrgang\LICENSE.txt" />
-    <None Include="Assets\Lava_Flowing_Shader\Shaders\Unlit_Lava_Distort_Transparent.shader" />
+    <None Include="Assets\Lava_Flowing_Shader (2)\Shaders\Unlit_Lava_Distort_Transparent.shader" />
     <None Include="Assets\TrackAssets1\Track_Environment_Free\Readme.txt" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Surface\6Textures\Diffuse.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Surface\5Textures\Bumped-NoFog.shader" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Surface\2Textures\VertexColored.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Assets\Day-Night Skyboxes\Textures\Readme for Assigning.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Surface\Vertex-colored\ColorOnly.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Standard\3Textures\VertexColored.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Surface\4Textures\Specular_for_target_2.0.shader" />
     <None Include="Assets\Cabin\Terrain\Textures by textures.com\README.txt" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Surface\3Textures\Specular.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Standard\Packed\8Textures.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Surface\5Textures\Diffuse-Fog.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Standard\8Textures\Bumped.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Standard\6Textures\Bumped.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Standard\5Textures\VertexColored-Fog.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Surface\WaterFlow.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\MeshTerrainEditor\EditorResources\Shaders\ConverterSplitPreview_URP.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\URP\4Textures.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Standard\5Textures\VertexColored-NoFog.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Surface\Vertex-colored\Specular.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Surface\4Textures\Bumped_for_target_2.0.shader" />
     <None Include="Assets\Sketchfab For Unity\Dependencies\Libraries\SketchfabPlugin.dll" />
-    <None Include="Assets\Lava_Flowing_Shader\Shaders\Unlit_Lava_Distort.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Surface\3Textures\Bumped.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Standard\5Textures\Bumped-Fog.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Standard\3Textures\Diffuse.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\URP\Grass.shader" />
+    <None Include="Assets\Lava_Flowing_Shader (2)\Shaders\Unlit_Lava_Distort.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\MTECommon.hlsl" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Surface\2Textures\Diffuse.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Specialized\Mali 400\Surface\2Textures\Bumped.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\MTECommonPBR.hlsl" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Surface\8Textures\Bumped.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Standard\4Textures\Diffuse.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Surface\2Textures\Bumped.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Surface\5Textures\VertexColored-NoFog.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\URP\VertexColor.shader" />
     <None Include="Assets\Customizable Skybox\Stylized Sky\Shaders\Stylized Sky.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Surface\6Textures\Bumped.shader" />
     <None Include="Assets\Day-Night Skyboxes\readme.txt" />
+    <None Include="Assets\MeshTerrainEditor\EditorResources\Details\ReadMe.txt" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Standard\TextureArray\TextureArray_DisplayNormal.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Surface\Grass\Billborad.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\URP\3Textures.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Standard\TextureArray\TextureArray.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Surface\2Textures\Specular.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Surface\3Textures\Diffuse.shader" />
     <None Include="Assets\Sketchfab For Unity\Dependencies\Libraries\Ionic.Zip.Unity.dll" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Standard\3Textures\Bumped.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Specialized\Mali 400\Surface\3Textures\Diffuse.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Surface\8Textures\Diffuse.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Unlit\2 Textures_baked_lightmap.shader" />
     <None Include="Assets\Sketchfab For Unity\Dependencies\Shaders\GLTFBumpToNormal.shader" />
+    <None Include="Assets\MeshTerrainEditor\EditorResources\Shaders\ConverterSplitPreview_Builtin.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Surface\4Textures\Diffuse.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Standard\7Textures\VertexColored.shader" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
-    <None Include="Assets\Lava_Flowing_Shader\Shaders\Unlit_Lava_Simple.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Surface\7Textures\Bumped.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Surface\4Textures\VertexColored.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Standard\5Textures\Diffuse-Fog.shader" />
+    <None Include="Assets\Lava_Flowing_Shader (2)\Shaders\Unlit_Lava_Simple.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Specialized\Mali 400\Surface\4Textures\Diffuse.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
-    <None Include="Assets\Import\Wii_U_-_Planes_Fire_&amp;_Rescue_-_Grand_Fusel_Lodge\license.txt" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\URP\TextureArray.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Standard\Packed\NamingConvention.txt" />
+    <None Include="Assets\Import\Wii_U_-_Planes_Fire_&amp;_Rescue_-_Grand_Fusel_Lodge (2)\license.txt" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Standard\5Textures\DisplayNormal.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Standard\5Textures\Bumped-NoFog.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
     <None Include="Assets\Sketchfab For Unity\Dependencies\Libraries\GLTFSerialization.dll" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Bangers - OFL.txt" />
+    <None Include="Assets\MeshTerrainEditor\EditorResources\Shaders\PaintTexturePreview_Builtin.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\Builtin\Surface\5Textures\DisplayNormal.shader" />
+    <None Include="Assets\MeshTerrainEditor\Shaders\URP\4Textures_height_blend_packed.shader" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -1181,12 +1292,12 @@
       <HintPath>Library\ScriptAssemblies\Unity.XR.Interaction.Toolkit.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.Sysroot.Linux_x86_64">
-      <HintPath>Library\ScriptAssemblies\Unity.Sysroot.Linux_x86_64.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Unity.EditorCoroutines.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Sysroot.Linux_x86_64">
+      <HintPath>Library\ScriptAssemblies\Unity.Sysroot.Linux_x86_64.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="PsdPlugin">
@@ -1367,6 +1478,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="MTE_script.csproj" />
     <ProjectReference Include="Unity.XR.Interaction.Toolkit.Samples.StarterAssets.csproj" />
   </ItemGroup>
   <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />

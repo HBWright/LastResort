@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - ski_ignore
+  - left_ignore
+  - right_ignore
+  - top_ignore
   layers:
   - Default
   - TransparentFX
