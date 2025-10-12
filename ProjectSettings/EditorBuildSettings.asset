@@ -11,9 +11,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/InteractionTest.unity
     guid: abff8f220aee7f74a96b433f0b846633
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/movement-test.unity
     guid: 158bb081f1133944cb35cdad7981f5e7
+  - enabled: 1
+    path: Assets/Scenes/overworld.unity
+    guid: eef4ef7a8feaeac428ed13f526f47aad
   m_configObjects:
     com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: fd5e3bbef677e19428f0595f85f7e578, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 873a128fd59d61c40a685367f0a07224, type: 2}

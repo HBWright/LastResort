@@ -12,6 +12,7 @@ public class SkiMovement : MonoBehaviour
     public Bottom_Trigger_Detector_Right bottomTriggerRight;
     public GameObject turnLeft;
     public GameObject turnRight;
+    public ParticleSystem snowTrail;
 
 
     [Header("Ski Speed Attributes")]
@@ -62,6 +63,10 @@ public class SkiMovement : MonoBehaviour
 
         // Move skis forward in the direction it is facing THIS WAS A NIGHTMARE TO SOLVE BTW!!!!!!!
         skis.transform.Translate(Vector3.forward * currentSpeed * Time.deltaTime, Space.Self); // constant movement
+
+        var emission = snowTrail.emission;
+        float normalizedSpeed = Mathf.InverseLerp(minSpeed, maxSpeed, currentSpeed); // 0 to 1
+        emission.rateOverTime = Mathf.Lerp(0f, 10f, normalizedSpeed); // low to high particle rate
     }
 
     IEnumerator SlowDown()
