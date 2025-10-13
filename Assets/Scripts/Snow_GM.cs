@@ -19,6 +19,7 @@ public class Snow_GM : MonoBehaviour
     public AudioSource Countdown;
     public AudioSource avalanche;
     public AudioSource alarm;
+    public AudioSource song;
 
     [Header("Player Things")]
     public GameObject MovementCubes;
@@ -52,6 +53,7 @@ public class Snow_GM : MonoBehaviour
         Countdown.Play();
         yield return new WaitWhile(() => Countdown.isPlaying);
 
+        song.Play();
         skiier1.GetComponent<UnityEngine.Splines.SplineAnimate>().Play();
         skiier2.GetComponent<UnityEngine.Splines.SplineAnimate>().Play();
 
@@ -60,13 +62,19 @@ public class Snow_GM : MonoBehaviour
 
     private IEnumerator AvalancheCutscene()
     {
-        avalancheTrigger.GetComponent<AvalancheSpawner>().enabled = true;
         alarm.Play();
         yield return new WaitForSeconds(1f);
+        song.Stop();
         avalanche.Play();
-        yield return new WaitForSeconds(5f);
+        avalancheTrigger.GetComponent<AvalancheSpawner>().enabled = true;
+        Vector3 pos = ski.transform.position;
+        pos.y += 1f;
+        ski.transform.position = pos;
+        ski.SetActive(false);
+        yield return new WaitForSeconds(3f);
         WhiteFadeOut.SetActive(true);
         BlackScreen.SetActive(true);
+        yield return new WaitForSeconds(1f);
         SceneManager.LoadScene("HELL_MAIN");
     }
 }

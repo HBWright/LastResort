@@ -10,6 +10,7 @@ public class Hell_GM : MonoBehaviour
     public AudioSource DevilLose;
     public AudioSource Countdown;
     public AudioSource portal;
+    public AudioSource song;
 
     [Header("Player Things")]
     public GameObject MovementCubes;
@@ -40,10 +41,10 @@ public class Hell_GM : MonoBehaviour
 
     private IEnumerator RaceConclusion()
     {
+        song.Stop();
         DevilLose.Play();
-        yield return new WaitForSeconds(5f);
         portal.Play();
-        yield return new WaitForSeconds(12f);
+        yield return new WaitForSeconds(5f);
         SceneManager.LoadScene("overworld_WIN");
     }
     
@@ -57,14 +58,16 @@ public class Hell_GM : MonoBehaviour
         yield return new WaitForSeconds(5f);
         DevilLaugh.Play();
         yield return new WaitWhile(() => DevilLaugh.isPlaying);
-        yield return new WaitForSeconds(1f);
-        
-        Countdown.Play();
+        song.Play();
         yield return new WaitForSeconds(2f);
+
+        Countdown.Play();
+        yield return new WaitForSeconds(1.3f);
         DevilLaugh.Play();
         devil.GetComponent<UnityEngine.Splines.SplineAnimate>().Play();
         yield return new WaitWhile(() => Countdown.isPlaying);
         MovementCubes.SetActive(true);
+        yield return new WaitForSeconds(1f);
     }
 
 }

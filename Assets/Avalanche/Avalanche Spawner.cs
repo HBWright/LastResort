@@ -115,5 +115,6 @@ public class AvalancheSpawner : MonoBehaviour
         {
             activeSpheres.Remove(data);
         }
+
     }
 }
