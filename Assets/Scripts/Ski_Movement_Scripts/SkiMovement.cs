@@ -13,6 +13,7 @@ public class SkiMovement : MonoBehaviour
     public GameObject turnLeft;
     public GameObject turnRight;
     public ParticleSystem snowTrail;
+    private bool firstPush = false;
 
 
     [Header("Ski Speed Attributes")]
@@ -22,6 +23,10 @@ public class SkiMovement : MonoBehaviour
     public float speedDecrease = .2f;
     public float decreaseRate = 1f;
     private float currentSpeed;         // current moving speed
+
+    [Header("SFX")]
+    public AudioSource pushSFX;
+    public AudioSource skiingSFX;
 
     void Start()
     {
@@ -48,14 +53,23 @@ public class SkiMovement : MonoBehaviour
         /////////////// Pushing Implementation ///////////////
         if (bottomTriggerLeft.pushedL && bottomTriggerRight.pushedR)
         {
+            if(!firstPush)
+            {
+                firstPush = true;
+                skiingSFX.Play();
+            }
+
             if (currentSpeed <= maxSpeed)
             {
                 currentSpeed += 1f;            // Increase speed by 1
+                pushSFX.Play();
                 print("oh shit it pushed!!!");
             }
             else
             {
+                pushSFX.Play();
                 currentSpeed = 10f;
+                print("you're going to fast man!!!");
             }
             bottomTriggerLeft.pushedL = false; // Reset flags
             bottomTriggerRight.pushedR = false;

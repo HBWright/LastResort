@@ -16,14 +16,6 @@ public class GameOverScript : MonoBehaviour
         StartCoroutine(FadeOut(image, FadeTime));
     }
 
-    // Update is called once per frame
-
-  
-    void Update()
-    {
-       
-        
-    }
     public IEnumerator FadeOut(Image image, float timetoFade)
     {
         Color startColor = image.color;

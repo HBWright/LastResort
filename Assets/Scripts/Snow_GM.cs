@@ -7,16 +7,24 @@ using Unity.Collections;
 public class Snow_GM : MonoBehaviour
 {
     [Header("Avalanche")]
+    public GameObject skiier1;
+    public GameObject skiier2;
+
+    [Header("Avalanche")]
     public GameObject avalancheTrigger;
     private bool avalancheStarted = false;
 
     [Header("Sound Effects")]
-    public AudioSource RaceStartChime;
+    public AudioSource Fanfare;
     public AudioSource Countdown;
+    public AudioSource avalanche;
+    public AudioSource alarm;
 
     [Header("Player Things")]
     public GameObject MovementCubes;
     public GameObject ski;
+    public GameObject WhiteFadeOut;
+    public GameObject BlackScreen;
 
 
     void Start()
@@ -35,22 +43,30 @@ public class Snow_GM : MonoBehaviour
     private IEnumerator RaceStart()
     {
         yield return new WaitForSeconds(5f);
-        // RaceStartChime.Play();
-        // yield return new WaitWhile(() => RaceStartChime.isPlaying);
+
+        Fanfare.Play();
+        yield return new WaitWhile(() => Fanfare.isPlaying);
+
         yield return new WaitForSeconds(1f);
-        // Countdown.Play();
-        // yield return new WaitWhile(() => Countdown.isPlaying);
-        // Start animations for racers here
+
+        Countdown.Play();
+        yield return new WaitWhile(() => Countdown.isPlaying);
+
+        skiier1.GetComponent<UnityEngine.Splines.SplineAnimate>().Play();
+        skiier2.GetComponent<UnityEngine.Splines.SplineAnimate>().Play();
+
         MovementCubes.SetActive(true);
     }
 
     private IEnumerator AvalancheCutscene()
     {
-        //start animation here
-        //alarm here
-        //rumbling sound effect here
+        avalancheTrigger.GetComponent<AvalancheSpawner>().enabled = true;
+        alarm.Play();
+        yield return new WaitForSeconds(1f);
+        avalanche.Play();
         yield return new WaitForSeconds(5f);
-        //fade to black shader here
-        SceneManager.LoadScene("HELL");
+        WhiteFadeOut.SetActive(true);
+        BlackScreen.SetActive(true);
+        SceneManager.LoadScene("HELL_MAIN");
     }
 }

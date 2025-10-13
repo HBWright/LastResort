@@ -5,18 +5,15 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/Environment.unity
-    guid: 9a58ce03fc4cca84985543fd7d645b29
-  - enabled: 0
-    path: Assets/Scenes/InteractionTest.unity
-    guid: add0330d67da165448e51805d1a7a7a7
-  - enabled: 0
-    path: Assets/Scenes/movement-test.unity
-    guid: 158bb081f1133944cb35cdad7981f5e7
   - enabled: 1
-    path: Assets/Scenes/overworld.unity
-    guid: d61c8b57282ee834fac75b2078a3b66e
+    path: Assets/Scenes/MAIN SCENES/overworld_MAIN.unity
+    guid: e8c2947eb4cdceb449236f65094938a9
+  - enabled: 1
+    path: Assets/Scenes/MAIN SCENES/HELL_MAIN.unity
+    guid: 9f65b6fba469ca042a8a823b49a87695
+  - enabled: 1
+    path: Assets/Scenes/MAIN SCENES/overworld_WIN.unity
+    guid: fca2a7357ece5e54684955449c826ba8
   m_configObjects:
     com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: fd5e3bbef677e19428f0595f85f7e578, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 873a128fd59d61c40a685367f0a07224, type: 2}
