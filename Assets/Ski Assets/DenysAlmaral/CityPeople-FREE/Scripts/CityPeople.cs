@@ -92,7 +92,7 @@ namespace CityPeople
         public void PlayAnyClip()
         {
             var cl = myClips[Random.Range(0, myClips.Length)];
-            animator.CrossFadeInFixedTime(cl.name, 1.0f, -1, Random.value * cl.length);
+            //animator.CrossFadeInFixedTime(cl.name, 1.0f, -1, Random.value * cl.length);
         }
 
         IEnumerator ShuffleClips()
@@ -100,7 +100,7 @@ namespace CityPeople
             while (true)
             {
                 yield return new WaitForSeconds(15.0f + Random.value * 5.0f);
-                PlayAnyClip();
+                //PlayAnyClip();
             }
         }
 
