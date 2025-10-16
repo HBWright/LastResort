@@ -162,6 +162,7 @@ PlayerSettings:
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
     Android: com.TeamRiski.LastResortTheDevilGoesUpToAlaska
+    Standalone: com.Team-Riski.Last-Resort---The-Devil-Goes-Up-To-Alaska
   buildNumber:
     Standalone: 0
     VisionOS: 0
