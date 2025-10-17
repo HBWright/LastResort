@@ -38,7 +38,7 @@ public class SkiMovement : MonoBehaviour
         if (topTriggerLeft.currentBody != null && topTriggerLeft.currentBody == topTriggerRight.currentBody) // Makes sure at least the left trigger isn't null, that way it doesn't start turning for both bodies being null
         {
             GameObject sharedBody = topTriggerLeft.currentBody; // Same body so just reads once
-            
+
             if (sharedBody == turnRight)
             {
                 skis.transform.Rotate(Vector3.up, turnRotationSpeed * Time.deltaTime);
@@ -53,7 +53,7 @@ public class SkiMovement : MonoBehaviour
         /////////////// Pushing Implementation ///////////////
         if (bottomTriggerLeft.pushedL && bottomTriggerRight.pushedR)
         {
-            if(!firstPush)
+            if (!firstPush)
             {
                 firstPush = true;
                 skiingSFX.Play();
@@ -75,12 +75,24 @@ public class SkiMovement : MonoBehaviour
             bottomTriggerRight.pushedR = false;
         }
 
+        /////////////// Falling Check ///////////////
+        Vector3 pos = skis.transform.position;
+        if (pos.x > 90f || pos.x < -90f || pos.z > 90f || pos.z < -90f)
+        {
+            Falling();
+        }
+
         // Move skis forward in the direction it is facing THIS WAS A NIGHTMARE TO SOLVE BTW!!!!!!!
         skis.transform.Translate(Vector3.forward * currentSpeed * Time.deltaTime, Space.Self); // constant movement
 
         var emission = snowTrail.emission;
         float normalizedSpeed = Mathf.InverseLerp(minSpeed, maxSpeed, currentSpeed); // 0 to 1
         emission.rateOverTime = Mathf.Lerp(0f, 10f, normalizedSpeed); // low to high particle rate
+    }
+    
+    private void Falling()
+    {
+        // add a cut to black followed by a crash sound, reload scene
     }
 
     IEnumerator SlowDown()

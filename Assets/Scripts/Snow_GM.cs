@@ -12,6 +12,7 @@ public class Snow_GM : MonoBehaviour
 
     [Header("Avalanche")]
     public GameObject avalancheTrigger;
+    public ParticleSystem avalancheParticle;
     private bool avalancheStarted = false;
 
     [Header("Sound Effects")]
@@ -65,8 +66,8 @@ public class Snow_GM : MonoBehaviour
         alarm.Play();
         yield return new WaitForSeconds(1f);
         song.Stop();
+        avalancheParticle.Play();
         avalanche.Play();
-        avalancheTrigger.GetComponent<AvalancheSpawner>().enabled = true;
         Vector3 pos = ski.transform.position;
         pos.y += 1f;
         ski.transform.position = pos;
@@ -74,7 +75,7 @@ public class Snow_GM : MonoBehaviour
         yield return new WaitForSeconds(3f);
         WhiteFadeOut.SetActive(true);
         BlackScreen.SetActive(true);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(7f);
         SceneManager.LoadScene("HELL_MAIN");
     }
 }
